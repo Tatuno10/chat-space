@@ -34,6 +34,8 @@ Things you may want to cover:
 ### Association
 - has_many :messages
 - has_many :phots
+- has_many :users_groups
+- has_many  :groups, through:  :users_groups
 
 ## groupsテーブル
 
@@ -43,8 +45,10 @@ Things you may want to cover:
 |user_id|integer|null: false foreign_key: true|
 
 ### Association
-- has_many :message
-- has_many :phot
+- has_many :messages
+- has_many :phots
+- has_many :users_groups
+- has_many  :users, through:  :users_groups
 
 ## messagesテーブル
 
