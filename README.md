@@ -39,12 +39,12 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|||, |
-|||, |
+|name|text|null: false|
+|user_id|integer|null: false foreign_key: true|
 
 ### Association
-- 
-- 
+- has_many :message
+- has_many :phot
 
 ## messagesテーブル
 
