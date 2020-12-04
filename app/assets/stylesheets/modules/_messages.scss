@@ -20,4 +20,9 @@
   height: 100vh;
   width: calc(100vw - 300px);
   background-color: #ffffff;
+  &__group-info {
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: solid #eeeeee;
+  }
 }
