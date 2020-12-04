@@ -25,4 +25,8 @@
     background-color: #ffffff;
     border-bottom: solid #eeeeee;
   }
+  &__message-list {
+    height: calc(100vh - 100px - 90px);
+    background-color: #fafafa;
+  }
 }
