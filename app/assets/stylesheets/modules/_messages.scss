@@ -76,7 +76,7 @@
     justify-content: space-between;
   }
 
-  &__group {
+  &__group-left {
     margin: 35px 0 0 40px;
   }
   &__group-name {
@@ -89,9 +89,13 @@
     margin-top: 15px;
   }
 
-  &__group-edit{
-
+  &__group-right{
+    width: 72px;
+    margin: 0 40px 0 0;
+    display: flex;
+    align-items: center;
   }
+  
 
   &__message-list {
     height: calc(100vh - 100px - 90px);

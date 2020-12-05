@@ -1,12 +1,13 @@
 .Chat-main
   .Chat-main__group-info
-    .Chat-main__group
+    .Chat-main__group-left
       .Chat-main__group-name
         test
       .Chat-main__group-member
         Member: masa
-    .Chat-main__group-edit
-    = link_to "#", class: "Chat-main__btn--edit" do
-      edit
+    .Chat-main__group-right
+      .Chat-main__group-edit
+      = link_to "#", class: "Chat-main__edit-btn" do
+        edit
   .Chat-main__message-list
   .Chat-main__message-form
