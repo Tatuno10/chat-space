@@ -74,6 +74,7 @@
     border-bottom: 1px solid  #eeeeee;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__group {
@@ -89,17 +90,16 @@
     margin-top: 15px;
   }
 
-  &__group-edit {
-    width: 72px;
-    margin: 0 40px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   &__edit-btn {
+    display: block;
+    width: 72px;
+    height: 40px;
+    padding: 0 20px;
+    margin: 28px 40px 0 0;
     color: #38aef0;
     text-decoration: none;
     font-size: 16px;
+
   }
 
   &__message-list {
