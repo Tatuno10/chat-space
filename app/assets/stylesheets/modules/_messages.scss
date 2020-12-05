@@ -89,13 +89,18 @@
     margin-top: 15px;
   }
 
-  &__group-right{
+  &__group-edit {
     width: 72px;
     margin: 0 40px 0 0;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
-  
+  &__edit-btn {
+    color: #38aef0;
+    text-decoration: none;
+    font-size: 16px;
+  }
 
   &__message-list {
     height: calc(100vh - 100px - 90px);
