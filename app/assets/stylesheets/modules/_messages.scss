@@ -15,34 +15,49 @@
     background-color: #253141;
     display: flex;
     align-items: center;
-    .User-name__top-items {
+  }
+  &__top-items {
       height: 20px;
       width: 260px;
       margin: 0 20px;
-      background-color: #d8d8d8;
+      background-color: #253141;
       display: flex;
       justify-content: space-between;
-      &__name {
-      }
-      &__icons {
-        width: 60px
-        
-      }
+  }
+  &__name {
+    color: #ffffff;
+    font-size: 16px;
+  }
+  &__icon-list {
+    width: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__btn{
+    color: #ffffff;
+    text-decoration: none;
+    &--cog {
+      margin: 0 0 0 5px;
     }
   }
+
   &__group-list {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
   }
-}
-
-.Top-items__icons {
-  display: flex;
-  justify-content: flex-start;
-  &__btn {
+  &__group-box {
+    background-color: #ffffff;
+  }
+  &__group-name{
+    
+  }
+  &__group-message{
 
   }
 }
+
+
 
 
 .Chat-main {
