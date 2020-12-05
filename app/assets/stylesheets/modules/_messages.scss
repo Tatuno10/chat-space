@@ -113,18 +113,22 @@
   }
 
   &__message-box {
-    background-color: blue;
+    
     margin: 35px 0 46px 40px;
   }
 
   &__message-info {
     display: flex;
+    margin-bottom: 12px;
   }
   &__poster-name {
-
+    color: #333333;
+    font-size: 16px;
+    margin-right: 10px;
   }
   &__message-date {
-
+    color: #999999;
+    font-size: 12px;
   }
 
   &__message-text {
