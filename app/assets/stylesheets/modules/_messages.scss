@@ -75,9 +75,20 @@
     display: flex;
     justify-content: space-between;
   }
-  &__group-name {
 
+  &__group {
+    margin: 35px 0 0 40px;
   }
+  &__group-name {
+    color: #333333;
+    font-size: 20px;
+  }
+  &__group-member {
+    color: #999999;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
   &__group-edit{
 
   }
