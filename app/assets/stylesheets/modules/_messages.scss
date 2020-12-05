@@ -47,13 +47,17 @@
     background-color: #2f3e51;
   }
   &__group-box {
-    background-color: #ffffff;
+    padding: 20px 20px 40px;
   }
-  &__group-name{
+  &__group-name {
+    color: #ffffff;
+    font-size: 15px;
     
   }
   &__group-message{
-
+    color: #ffffff;
+    font-size: 11px;
+    margin: 5px 0 0 0;
   }
 }
 
