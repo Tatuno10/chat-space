@@ -15,7 +15,7 @@
     background-color: #253141;
     display: flex;
     align-items: center;
-    &__top-items {
+    .User-name__top-items {
       height: 20px;
       width: 260px;
       margin: 0 20px;
@@ -23,13 +23,10 @@
       display: flex;
       justify-content: space-between;
       &__name {
-        
+        background-color: blue;
       }
       &__icons {
         width: 60px
-        &--edit {
-          color: #ffffff;
-        }
         
       }
     }
@@ -37,6 +34,23 @@
   &__group-list {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+  }
+}
+
+.Top-items {
+  height: 20px;
+  width: 260px;
+  margin: 0 20px;
+  background-color: green;
+  display: flex;
+  justify-content: space-between;
+  &__name {
+    background-color: blue;
+  }
+  &__icons {
+    width: 60px
+    
+    
   }
 }
 
