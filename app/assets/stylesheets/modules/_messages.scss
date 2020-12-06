@@ -137,6 +137,7 @@
     background-color: #d2d2d2;
     display: flex;
     align-items: center;
+    justify-content: space-around;
   }
 
   &__input-box {
@@ -144,7 +145,11 @@
   }
 
   &__text-form {
-
+    height: 50px;
+    padding: 0 0px 0 10px;
+    width: 100%;
+    color: #434a54;
+    border-style: none;
   }
 
   &__image-form {
