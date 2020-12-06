@@ -107,13 +107,8 @@
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
   }
-  &__message-form {
-    height: 90px;
-    background-color: #d2d2d2;
-  }
-
+  
   &__message-box {
-    
     margin: 35px 0 46px 40px;
   }
 
@@ -121,11 +116,13 @@
     display: flex;
     margin-bottom: 12px;
   }
+
   &__poster-name {
     color: #333333;
     font-size: 16px;
     margin-right: 10px;
   }
+
   &__message-date {
     color: #999999;
     font-size: 12px;
@@ -134,4 +131,10 @@
   &__message-text {
     color: #434A54;
   }
+
+  &__message-form {
+    height: 90px;
+    background-color: #d2d2d2;
+  }
+
 }
