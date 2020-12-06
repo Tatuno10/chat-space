@@ -75,6 +75,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
+    box-sizing: border-box;
   }
 
   &__group {
@@ -137,13 +138,15 @@
   &__footer {
     height: 90px;
     background-color: #d2d2d2;
+    padding: 20px 40px 20px 50px;
+    box-sizing: border-box;
   }
  
 
   &__message-form {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+  
   }
 
   &__input-box {
@@ -151,7 +154,8 @@
   }
 
   &__text-form {
-    padding: 0 0px 0 10px;
+    height: 50px;
+    padding: 0 45px 0 10px;
     width: 100%;
     color: #434a54;
     border-style: none;
