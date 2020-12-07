@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+$color-white: #ffffff;
+
 .wrapper {
   display: flex;
 }
@@ -25,7 +27,7 @@
       justify-content: space-between;
   }
   &__name {
-    color: #ffffff;
+    color: $color-white;
     font-size: 16px;
   }
   &__icon-list {
@@ -35,7 +37,7 @@
     align-items: center;
   }
   &__btn{
-    color: #ffffff;
+    color: $color-white;
     text-decoration: none;
     &--cog {
       margin: 0 0 0 5px;
@@ -50,12 +52,12 @@
     padding: 20px 20px 40px;
   }
   &__group-name {
-    color: #ffffff;
+    color: $color-white;
     font-size: 15px;
     
   }
   &__group-message{
-    color: #ffffff;
+    color: $color-white;
     font-size: 11px;
     margin: 5px 0 0 0;
   }
@@ -67,10 +69,10 @@
 .Chat-main {
   height: 100vh;
   width: calc(100vw - 300px);
-  background-color: #ffffff;
+  background-color: $color-white;
   &__group-info {
     height: 100px;
-    background-color: #ffffff;
+    background-color: $color-white;
     border-bottom: 1px solid  #eeeeee;
     display: flex;
     justify-content: space-between;
