@@ -6,6 +6,6 @@ class GroupsController < ApplicationController
   end
 
   def create
-    bnding.pry
+    binding.pry
   end
 end
