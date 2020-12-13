@@ -25,10 +25,10 @@
       .Chat-main__message-text
         今日は夜から雨
   .Chat-main__footer
-    %form.Chat-main__message-form
+     = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Chat-main__input-box
-        %input{"placeholder": "type a message", "type": "text", class: "Chat-main__text-form"}
-        %label{class: "Chat-main__image-form"}
+        = f.text_field :content, class: 'Chat-main__text-form', placeholder: 'type a message'
+        = f.label :image, class: 'Chat-main__image-form' do
           = icon('far', 'image')
-          %input{type: "file", class: "Chat-main__image-file"}
-      %input.Chat-main__submit-btn{"name": "SEND", "type": "submit", "value": "Send"}
+          = f.file_field :image, class: 'Chat-main__image-file'
+      = f.subumit 'SEND', class 'Chat-main__submit-btn'
