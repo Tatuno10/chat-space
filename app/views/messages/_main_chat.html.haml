@@ -5,7 +5,7 @@
         = @group.name
       .Chat-main__group-member
         '= group.show_member_list'
-    = link_to "#", class: "Chat-main__edit-btn" do
+    = link_to edit_group_path(@group), class: "Chat-main__edit-btn" do
       edit
   .Chat-main__message-list
     = render @messages
