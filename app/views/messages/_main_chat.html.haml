@@ -10,10 +10,10 @@
   .Chat-main__message-list
     = render @messages
   .Chat-main__footer
-     = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+    = form_with model: [@group, @message], html: {class: "Chat-main__message-form"}, local: true do |f|
       .Chat-main__input-box
         = f.text_field :content, class: 'Chat-main__text-form', placeholder: 'type a message'
         = f.label :image, class: 'Chat-main__image-form' do
           = icon('far', 'image')
           = f.file_field :image, class: 'Chat-main__image-file'
-      = f.subumit 'SEND', class 'Chat-main__submit-btn'
+      = f.submit 'Send', class: 'Chat-main__submit-btn'
