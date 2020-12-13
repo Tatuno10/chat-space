@@ -9,19 +9,12 @@
         = link_to edit_user_path(current_user), class: "Side-bar__btn Side-bar__btn--cog" do
           = icon('fas', 'cog', class: "Side-bar__btn--icon")
   .Side-bar__group-list
-    .Side-bar__group-box
-      .Side-bar__group-name
-        TECH CHAMP
-      .Side-bar__group-message
-        まだメッセージがありません
-    .Side-bar__group-box
-      .Side-bar__group-name
-        TECH CHAMP2
-      .Side-bar__group-message
-        まだメッセージがありません
-    .Side-bar__group-box
-      .Side-bar__group-name
-        TECH CHAMP3
-      .Side-bar__group-message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .Side-bar__group-box
+        = link_to '#' do
+          .Side-bar__group-name
+            = group.name
+          .Side-bar__group-message
+            メッセージはまだありません
+
     
