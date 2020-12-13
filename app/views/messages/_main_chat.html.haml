@@ -2,9 +2,9 @@
   .Chat-main__group-info
     .Chat-main__group
       .Chat-main__group-name
-        
+        = @group.name
       .Chat-main__group-member
-        Member: masa
+        '= group.show_member_list'
     = link_to "#", class: "Chat-main__edit-btn" do
       edit
   .Chat-main__message-list
