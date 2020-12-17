@@ -1,8 +1,9 @@
 FactoryBot.define do
   
   factory :message do
-    content {"test"}
-    image {"test.png"}
-
+    content {Faker::Lorem.sentence}
+    image {File.open("#{Rails.root}/Users/yamashitatatsuya/Downloads/staff2.jpg")}
+    user
+    group
   end
 end
