@@ -1,30 +1,39 @@
 require 'rails_helper'
-describe Message do
-  describe "is invalid without a messsage" do
-    describe "If you have a message, you can save it" do
-      
+
+RSpec.describe Message, type: :model do
+  describe "#create" do
+    context 'can save' do
+      it "If you have a message, you can save it" do
+        expect(build(:message, image: nil)).to be_valid
+      end
+
+      it 'If you have an image, you can save it' do
+      expect(build(:message, content: nil)).to be_valid
+      end
+
+      it 'If you have a message and an image, you can save it' do
+      expect(build(:message)).to be_valid
+      end
     end
 
-    describe 'If you have an image, you can save it' do
-      
-    end
+    context 'can not save' do
+      it 'Cannot be saved without a message or image' do
+        message = build(:message, content: nil, image: nil)
+        message.valid?
+        expect(message.errors[:content]).to include("を入力してください")
+      end
 
-    describe 'If you have a message and an image, you can save it' do
-      
-    end
-  end
+      it 'Cannot save without group_id' do
+        message = build(:message, group: nil)
+        message.valid?
+        expect(message.errors[:group]).to include("を入力してください")
+      end
 
-  describe "is not invalid without a message" do
-    describe 'Cannot be saved without a message or image' do
-      
-    end
-
-    describe 'Cannot save without group_id' do
-      
-    end
-
-    describe 'Cannot save without user_id' do
-      
+      it 'Cannot save without user_id' do
+        message = build(:message, user: nil)
+        message.valid?
+        expect(message.errors[:user]).to include("を入力してください")
+      end
     end
   end
 end
