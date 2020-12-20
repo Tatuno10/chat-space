@@ -41,12 +41,12 @@ $(function(){
   }
 
   $(".Chat-main__message-form").on("submit",function(e){
-    e.preventDefault()
+    e.preventDefault();
     let formData = new FormData(this);
     let url = $(this).attr('action');
     $.ajax({
       url: url,
-      type: 'POST',
+      type: "POST",
       data: formData,
       dataType: 'json',
       processData: false,
@@ -54,7 +54,7 @@ $(function(){
     })
     .done(function(data) {
       let html = buildHTML(data);
-      $('.Chat-main__message-list').append(html)
+      $('.Chat-main__message-list').append(html);
       $('form')[0].reset();
     })
   })
