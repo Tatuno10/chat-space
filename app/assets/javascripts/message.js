@@ -7,7 +7,7 @@ $(function(){
           <div class="Chat-main__poster-name">
             ${message.user_name}
           </div>
-          <div class="Chat-space__message-date">
+          <div class="Chat-main__message-date">
             ${message.created_at}
           </div>
         </div>
@@ -26,7 +26,7 @@ $(function(){
           <div "class=Chat-main__poster-name">
             ${message.user_name}
           </div>
-          <div class="Chat-space__message-date">
+          <div class="Chat-main__message-date">
             ${message.created_at}
           </div>
         </div>
@@ -55,6 +55,7 @@ $(function(){
     .done(function(data) {
       let html = buildHTML(data);
       $('.Chat-main__message-list').append(html);
+      $('.Chat-main__message-list').animate({ scrollTop: $('.Chat-main__message-list')[0].scrollHeight});
       $('form')[0].reset();
     })
   })
