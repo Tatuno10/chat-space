@@ -4,11 +4,11 @@ $(function(){
       let html = 
       `<div class="Chat-main__message-box">
         <div class="Chat-main__message-info">
-          <div "class=Chat-main__poster-name">
+          <div class="Chat-main__poster-name">
             ${message.user_name}
           </div>
           <div class="Chat-space__message-date">
-            ${message.created_st}
+            ${message.created_at}
           </div>
         </div>
         <div class="Chat-main__message-text">
@@ -24,10 +24,10 @@ $(function(){
       `<div class="Chat-main__message-box">
         <div class="Chat-main__message-info">
           <div "class=Chat-main__poster-name">
-            ${message.user.name}
+            ${message.user_name}
           </div>
           <div class="Chat-space__message-date">
-            ${message.created_st}
+            ${message.created_at}
           </div>
         </div>
           <div class="Chat-main__message-text">
