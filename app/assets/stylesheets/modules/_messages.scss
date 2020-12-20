@@ -47,6 +47,7 @@ $color-white: #ffffff;
   &__group-list {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+    overflow: scroll;
   }
   &__group-box {
     padding: 20px 20px 40px;
@@ -111,6 +112,7 @@ $color-white: #ffffff;
     background-color: #fafafa;
     padding: 35px 40px 0;
     box-sizing: border-box;
+    overflow: scroll;
   }
   
   &__message-box {
