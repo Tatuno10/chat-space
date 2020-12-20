@@ -59,5 +59,8 @@ $(function(){
       $('form')[0].reset();
       $('.Chat-main__submit-btn').prop('disabled', false)
     })
+    .fail(function() {
+      alert("エラーです")
+    })
   })
 });
