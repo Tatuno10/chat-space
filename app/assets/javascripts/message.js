@@ -1,40 +1,41 @@
 $(function(){
-
   function buildHTML(message){
-    if (message.image) {
-      let html = `<div class="Chat-main__message-box">
-                    <div class="Chat-main__message-info">
-                      <div "class=Chat-main__poster-name">
-                        ${message.user_name}
-                      </div>
-                      <div class="Chat-space__message-date">
-                        ${message.created_st}
-                      </div>
-                    </div>
-                    <div class="Chat-main__message-text">
-                      <p class="Chat-main__content">
-                        ${message.content}
-                      </p>
-                      <img class="Chat-main__image" src="${message.image}">
-                    </div>
-                  </div>`
+    if ( message.image ) {
+      let html = 
+      `<div class="Chat-main__message-box">
+        <div class="Chat-main__message-info">
+          <div "class=Chat-main__poster-name">
+            ${message.user_name}
+          </div>
+          <div class="Chat-space__message-date">
+            ${message.created_st}
+          </div>
+        </div>
+        <div class="Chat-main__message-text">
+          <p class="Chat-main__content">
+            ${message.content}
+          </p>
+          <img class="Chat-main__image" src="${message.image}">
+        </div>
+      </div>`
       return html;
     } else {
-      let html = `<div class="Chat-main__message-box">
-                    <div class="Chat-main__message-info">
-                      <div "class=Chat-main__poster-name">
-                        ${message.user.name}
-                      </div>
-                      <div class="Chat-space__message-date">
-                        ${message.created_st}
-                      </div>
-                    </div>
-                    <div class="Chat-main__message-text">
-                      <p class="Chat-main__content">
-                        ${message.content}
-                      </p>
-                    </div>
-                  </div>`
+      let html = 
+      `<div class="Chat-main__message-box">
+        <div class="Chat-main__message-info">
+          <div "class=Chat-main__poster-name">
+            ${message.user.name}
+          </div>
+          <div class="Chat-space__message-date">
+            ${message.created_st}
+          </div>
+        </div>
+          <div class="Chat-main__message-text">
+            <p class="Chat-main__content">
+              ${message.content}
+            </p>
+          </div>
+      </div>`
       return html;
     };
   }
