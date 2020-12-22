@@ -1,5 +1,5 @@
-$(function(){
 
+$(function() {
   function addUser(user) {
     let html = `
                 <div class="ChatMember clearfix">
@@ -7,7 +7,7 @@ $(function(){
                   <div class="ChatMember__add ChatMember__button" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
                 </div>
                 `;
-    $("#UserSearchResult").append(html)
+    $("#UserSearchResult").append(html);
   }
 
   function addNoUser() {
@@ -16,7 +16,7 @@ $(function(){
                   <p class="ChatMember__name">ユーザーが見つかりません</p>
                 </div>
                 `;
-    $("#UserSearchResult").append(html)
+    $("#UserSearchResult").append(html);
   }
 
   $("#UserSearch__field").on("keyup", function() {
@@ -24,11 +24,11 @@ $(function(){
     $.ajax({
       type: "GET",
       url: "/users",
-      data: {　keyword: input　},
-      datatype: "json"
+      data: { keyword: input },
+      dataType: "json"
     })
     .done(function(users) {
-      $("#UserSearchList").empty();
+      $("#UserSearchResult").empty();
       if (users.length !== 0) {
         users.forEach(function(user) {
           addUser(user);
@@ -40,7 +40,7 @@ $(function(){
       }
     })
     .fail(function() {
-      alert('通信エラーです。ユーザが表示できません。');
+      alert("通信エラーです。ユーザーが表示できません。");
     });
   });
 });
