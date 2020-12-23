@@ -49,7 +49,7 @@ $(function() {
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      if (messages.length !==0) {
+      if (messages.length !== 0) {
         let insertHTML = '';
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
@@ -58,10 +58,9 @@ $(function() {
         $('.Chat-main__message-list').animate({ scrollTop: $('.Chat-main__message-list')[0].scrollHeight})
       }
     })
-    console.log(insertHTML)
     .fail(function() {
       alert('error');
     });
   };
-  setInterval(reloadMessages, 70000);
+  setInterval(reloadMessages, 7000);
 });
