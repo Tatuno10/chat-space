@@ -14,8 +14,8 @@ $(function(){
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
         });
-        $('.MessageField').append(insertHTML)
-        $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight})
+        $('.Chat-main__message-list').append(insertHTML)
+        $('.Chat-main__message-list').animate({ scrollTop: $('.MessageField')[0].scrollHeight})
       }
     })
     .fail(function() {
