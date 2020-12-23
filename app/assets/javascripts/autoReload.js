@@ -1,4 +1,4 @@
-$function() {
+$(function() {
   function buildHTML(message){
     if ( message.image ) {
       let html = 
@@ -63,4 +63,4 @@ $function() {
     });
   };
   setInterval(reloadMessages, 70000);
-}
+});
