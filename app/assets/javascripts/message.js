@@ -15,6 +15,7 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         $('.MessageField').append(insertHTML)
+        $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight})
       }
     })
     .fail(function() {
@@ -87,4 +88,5 @@ $(function(){
       
     })
   })
+  setInterval(reloadMessages, 70000);
 });
