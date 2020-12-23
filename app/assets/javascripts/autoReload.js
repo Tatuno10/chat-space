@@ -55,9 +55,10 @@ $(function() {
           insertHTML += buildHTML(message)
         });
         $('.Chat-main__message-list').append(insertHTML)
-        $('.Chat-main__message-list').animate({ scrollTop: $('.MessageField')[0].scrollHeight})
+        $('.Chat-main__message-list').animate({ scrollTop: $('.Chat-main__message-list')[0].scrollHeight})
       }
     })
+    console.log(insertHTML)
     .fail(function() {
       alert('error');
     });
