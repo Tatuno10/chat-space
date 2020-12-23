@@ -1,8 +1,8 @@
-$(function(){
+$(function() {
   function buildHTML(message){
     if ( message.image ) {
       let html = 
-      `<div class="Chat-main__message-box">
+      `<div class="Chat-main__message-box" data-message-id=${message.id}>
         <div class="Chat-main__message-info">
           <div class="Chat-main__poster-name">
             ${message.user_name}
@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html = 
-      `<div class="Chat-main__message-box">
+      `<div class="Chat-main__message-box" data-message-id=${message.id}>
         <div class="Chat-main__message-info">
           <div "class=Chat-main__poster-name">
             ${message.user_name}
@@ -40,28 +40,27 @@ $(function(){
     };
   }
 
-  $(".Chat-main__message-form").on("submit",function(e){
-    e.preventDefault();
-    let formData = new FormData(this);
-    let url = $(this).attr('action');
+  let reloadMessages = function() {
+    let last_message_id = $('.Chat-main__message-box:last').data("message-id") || 0;
     $.ajax({
-      url: url,
-      type: "POST",
-      data: formData,
+      url: "api/messages",
+      type: 'get',
       dataType: 'json',
-      processData: false,
-      contentType: false
+      data: {id: last_message_id}
     })
-    .done(function(data) {
-      let html = buildHTML(data);
-      $('.Chat-main__message-list').append(html);
-      $('.Chat-main__message-list').animate({ scrollTop: $('.Chat-main__message-list')[0].scrollHeight});
-      $('form')[0].reset();
-      $('.Chat-main__submit-btn').prop('disabled', false)
+    .done(function(messages) {
+      if (messages.length !== 0) {
+        let insertHTML = '';
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        $('.Chat-main__message-list').append(insertHTML)
+        $('.Chat-main__message-list').animate({ scrollTop: $('.Chat-main__message-list')[0].scrollHeight})
+      }
     })
     .fail(function() {
-      alert("エラーです")
-      
-    })
-  })
+      alert('error');
+    });
+  };
+  setInterval(reloadMessages, 7000);
 });
