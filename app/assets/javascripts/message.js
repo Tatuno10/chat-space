@@ -1,27 +1,4 @@
 $(function(){
-  
-  let reloadMessages = function() {
-    let last_message_id = $('.Chat-main__message-box:last').data("message-id") || 0;
-    $.ajax({
-      url: "api/messages",
-      type: 'get',
-      dataType: 'json',
-      data: {id: last_message_id}
-    })
-    .done(function(messages) {
-      if (messages.length !==0) {
-        let insertHTML = '';
-        $.each(messages, function(i, message) {
-          insertHTML += buildHTML(message)
-        });
-        $('.Chat-main__message-list').append(insertHTML)
-        $('.Chat-main__message-list').animate({ scrollTop: $('.MessageField')[0].scrollHeight})
-      }
-    })
-    .fail(function() {
-      alert('error');
-    });
-  };
 
   function buildHTML(message){
     if ( message.image ) {
@@ -88,5 +65,4 @@ $(function(){
       
     })
   })
-  setInterval(reloadMessages, 70000);
 });
