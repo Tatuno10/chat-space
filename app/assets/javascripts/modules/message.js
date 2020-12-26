@@ -62,7 +62,7 @@ $(function(){
     })
     .fail(function() {
       alert("エラーです")
-      
+      $('.Chat-main__submit-btn').prop('disabled', false)
     })
   })
 });
